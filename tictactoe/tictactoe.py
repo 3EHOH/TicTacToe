@@ -8,8 +8,9 @@ def main():
     current_player = "X"
     turn_tracker = 0
 
-    board = initialize_board()
     print("BEHOLD, YE MIGHTY, AND DESPAIR! PLAY TIC TAC TOE IF YOU DARE!")
+
+    board = initialize_board()
     print_board(board)
 
     if is_versus_ai():
