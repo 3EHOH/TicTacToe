@@ -5,11 +5,12 @@ import time
 
 
 def main():
+    current_player = "X"
+    turn_tracker = 0
+
     board = initialize_board()
     print("BEHOLD, YE MIGHTY, AND DESPAIR! PLAY TIC TAC TOE IF YOU DARE!")
     print_board(board)
-    current_player = "X"
-    turn_tracker = 0
 
     if is_versus_ai():
         play_human(board, current_player, turn_tracker)
@@ -19,6 +20,7 @@ def main():
 
 def is_versus_ai():
     response = input("Play against a computer? Hit the 'y' key ... if you dare: ")
+
     if response is not "y":
         return False
     else:
